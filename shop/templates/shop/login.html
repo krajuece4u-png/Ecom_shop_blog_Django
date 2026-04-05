@@ -1,0 +1,26 @@
+{% extends 'shop/basic.html' %}
+
+{% block title %}Login - KR4U{% endblock %}
+
+{% block body %}
+<div class="container mt-5" style="max-width:420px;">
+    <div class="card shadow-sm p-4">
+        <h4 class="mb-3">Login by Phone</h4>
+        {% if error %}
+            <div class="alert alert-danger">{{ error }}</div>
+        {% endif %}
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label class="form-label">Phone Number</label>
+                <input type="text" name="phone" class="form-control" placeholder="e.g. +919876543210" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Name (Optional)</label>
+                <input type="text" name="name" class="form-control" placeholder="Your name">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login / Register</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

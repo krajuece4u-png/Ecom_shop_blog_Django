@@ -1,0 +1,196 @@
+✅ First, open Django shell
+python manage.py shell
+
+Then paste all of this:
+
+
+from shop.models import product
+from datetime import date
+
+products = [
+    {
+        "product_name": "iPhone 15",
+        "category": "Electronics",
+        "subcategory": "Mobile",
+        "price": 79999,
+        "desc": "Latest Apple smartphone with advanced camera",
+        "put_date": date(2026, 4, 1),
+        "image": "shop/images/iphone15.jpg"
+    },
+    {
+        "product_name": "Samsung Galaxy S24",
+        "category": "Electronics",
+        "subcategory": "Mobile",
+        "price": 69999,
+        "desc": "Flagship Samsung smartphone with AMOLED display",
+        "put_date": date(2026, 4, 1),
+        "image": "shop/images/s24.jpg"
+    },
+    {
+        "product_name": "OnePlus 12",
+        "category": "Electronics",
+        "subcategory": "Mobile",
+        "price": 58999,
+        "desc": "Fast and smooth Android smartphone",
+        "put_date": date(2026, 4, 1),
+        "image": "shop/images/oneplus12.jpg"
+    },
+    {
+        "product_name": "Dell Inspiron 15",
+        "category": "Electronics",
+        "subcategory": "Laptop",
+        "price": 55999,
+        "desc": "15-inch laptop for work and study",
+        "put_date": date(2026, 4, 1),
+        "image": "shop/images/dell.jpg"
+    },
+    {
+        "product_name": "HP Pavilion",
+        "category": "Electronics",
+        "subcategory": "Laptop",
+        "price": 62999,
+        "desc": "Powerful laptop with sleek design",
+        "put_date": date(2026, 4, 1),
+        "image": "shop/images/hp.jpg"
+    },
+    {
+        "product_name": "Lenovo IdeaPad",
+        "category": "Electronics",
+        "subcategory": "Laptop",
+        "price": 48999,
+        "desc": "Reliable laptop for daily use",
+        "put_date": date(2026, 4, 1),
+        "image": "shop/images/lenovo.jpg"
+    },
+    {
+        "product_name": "Nike Running Shoes",
+        "category": "Fashion",
+        "subcategory": "Footwear",
+        "price": 4999,
+        "desc": "Comfortable running shoes for men",
+        "put_date": date(2026, 4, 1),
+        "image": "shop/images/nike.jpg"
+    },
+    {
+        "product_name": "Adidas Sneakers",
+        "category": "Fashion",
+        "subcategory": "Footwear",
+        "price": 4599,
+        "desc": "Stylish sneakers for casual wear",
+        "put_date": date(2026, 4, 1),
+        "image": "shop/images/adidas.jpg"
+    },
+    {
+        "product_name": "Puma Sports Shoes",
+        "category": "Fashion",
+        "subcategory": "Footwear",
+        "price": 4299,
+        "desc": "Durable sports shoes for training",
+        "put_date": date(2026, 4, 1),
+        "image": "shop/images/puma.jpg"
+    },
+    {
+        "product_name": "Levi's Blue Jeans",
+        "category": "Fashion",
+        "subcategory": "Clothing",
+        "price": 2499,
+        "desc": "Slim fit blue jeans for everyday wear",
+        "put_date": date(2026, 4, 1),
+        "image": "shop/images/jeans.jpg"
+    },
+    {
+        "product_name": "Cotton T-Shirt",
+        "category": "Fashion",
+        "subcategory": "Clothing",
+        "price": 799,
+        "desc": "Soft cotton t-shirt in multiple colors",
+        "put_date": date(2026, 4, 1),
+        "image": "shop/images/tshirt.jpg"
+    },
+    {
+        "product_name": "Formal Shirt",
+        "category": "Fashion",
+        "subcategory": "Clothing",
+        "price": 1499,
+        "desc": "Classic formal shirt for office wear",
+        "put_date": date(2026, 4, 1),
+        "image": "shop/images/shirt.jpg"
+    },
+    {
+        "product_name": "Wooden Study Table",
+        "category": "Furniture",
+        "subcategory": "Table",
+        "price": 8999,
+        "desc": "Strong wooden study table with storage",
+        "put_date": date(2026, 4, 1),
+        "image": "shop/images/table.jpg"
+    },
+    {
+        "product_name": "Office Chair",
+        "category": "Furniture",
+        "subcategory": "Chair",
+        "price": 5499,
+        "desc": "Ergonomic office chair with back support",
+        "put_date": date(2026, 4, 1),
+        "image": "shop/images/chair.jpg"
+    },
+    {
+        "product_name": "Bookshelf",
+        "category": "Furniture",
+        "subcategory": "Storage",
+        "price": 3999,
+        "desc": "Compact bookshelf for home and office",
+        "put_date": date(2026, 4, 1),
+        "image": "shop/images/bookshelf.jpg"
+    },
+    {
+        "product_name": "Smart Watch",
+        "category": "Electronics",
+        "subcategory": "Wearable",
+        "price": 6999,
+        "desc": "Fitness tracking smart watch with notifications",
+        "put_date": date(2026, 4, 1),
+        "image": "shop/images/watch.jpg"
+    },
+    {
+        "product_name": "Wireless Earbuds",
+        "category": "Electronics",
+        "subcategory": "Accessories",
+        "price": 2999,
+        "desc": "Bluetooth earbuds with charging case",
+        "put_date": date(2026, 4, 1),
+        "image": "shop/images/earbuds.jpg"
+    },
+    {
+        "product_name": "Backpack",
+        "category": "Fashion",
+        "subcategory": "Accessories",
+        "price": 1799,
+        "desc": "Water-resistant backpack for travel and college",
+        "put_date": date(2026, 4, 1),
+        "image": "shop/images/backpack.jpg"
+    },
+    {
+        "product_name": "Gaming Mouse",
+        "category": "Electronics",
+        "subcategory": "Accessories",
+        "price": 1299,
+        "desc": "High precision gaming mouse with RGB",
+        "put_date": date(2026, 4, 1),
+        "image": "shop/images/mouse.jpg"
+    },
+    {
+        "product_name": "Bluetooth Speaker",
+        "category": "Electronics",
+        "subcategory": "Accessories",
+        "price": 2499,
+        "desc": "Portable speaker with deep bass",
+        "put_date": date(2026, 4, 1),
+        "image": "shop/images/speaker.jpg"
+    }
+]
+
+for item in products:
+    product.objects.create(**item)
+
+print("20 products added successfully!")

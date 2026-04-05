@@ -1,0 +1,1 @@
+this is test text to check the static file load.
