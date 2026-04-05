@@ -1,0 +1,1 @@
+# Ecom_shop_blog_Django
